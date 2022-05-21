@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CurrencyConverter</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <main class="container mx-auto mt-28 px-5  space-x-6 flex">
+      
+      <div class="mx-auto md:w-1/2 w-full container pl-5">
+        <%= render partial: 'history_logs/form', locals: {history_log: HistoryLog.new} %>
+      </div>
+      <div class="container md:w-1/2  w-full">
+        <%= yield %>
+      </div>
+      
+    </main>
+  </body>
+</html>
