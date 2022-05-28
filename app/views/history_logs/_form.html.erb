@@ -14,12 +14,12 @@
 
   <div class="my-5">
     <%= form.label :from %>
-    <%= form.text_field :from, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.select :from, currency_selection, {include_blank: true}, {class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full"} %>
   </div>
 
   <div class="my-5">
     <%= form.label :to %>
-    <%= form.text_field :to, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.select :to, currency_selection, {include_blank: true}, {class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full"} %>
   </div>
 
   <div class="my-5">
